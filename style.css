@@ -1,0 +1,555 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&family=Poppins:ital,wght@0,100;0,300;1,100;1,200;1,300&family=Quantico:ital@0;1&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
+
+body {
+    margin: 0;
+    padding: 0;
+    border: border-box;
+    background-color: #0d1526;
+    background: radial-gradient(ellipse at top, #1f496f 0%, #0d1526 100%);
+}
+
+.events {
+    height: 100%;
+    width: 100%;
+ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://media.licdn.com/dms/image/D4D22AQEGMPlCMqmGrw/feedshare-shrink_1280/0/1698749032922?e=1701907200&v=beta&t=9he7e8IyYw8_yyeqXJ6-9nI6kPJn2Y4AB23Wdb_-Afk);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Add this line to make the background fixed */
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    line-height: 0rem;
+    position: relative; /* Add this line to enable z-index */
+  }
+/* Add this CSS to center-align the "EVENTS" h1 element */
+.event {
+   
+    z-index: 100;
+    top: 0;
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh; /* Make it occupy the full viewport height */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+    background: linear-gradient(180deg, #FFF -11.67%, #CAB8A6 145.83%); /* Set your desired background color */
+    color: rgb(203, 159, 46);
+    font-family: 'Orbitron', sans-serif;
+ /* Set your desired text color */
+    font-size: 3rem; /* Set your desired font size */
+}
+.event-background{
+    position: relative;
+
+}
+.event-image {
+    position: absolute;
+    /* Adjust the positioning, size, and z-index of images as needed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Adjust the z-index to control the image stacking order */
+}
+
+
+@keyframes anim-popoutin {
+    0% {
+        color: black;
+        transform: scale(0);
+        opacity: 0;
+        text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+
+    25% {
+        color: #CAB8A6;
+        transform: scale(2);
+        opacity: 1;
+        text-shadow: 3px 10px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    50% {
+        color: F2D8C9;
+        transform: scale(1);
+        opacity: 1;
+        text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        /* animate nothing to add pause at the end of animation */
+        transform: scale(1);
+        opacity: 1;
+        text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+    }
+}
+@media (max-width: 768px) {
+    .event {
+        font-size: 2rem; /* Adjust the font size for smaller screens */
+    }
+}
+
+
+
+
+.eventlist {
+
+    margin: 8rem;
+    margin-top: -30rem;
+    margin-bottom: -30rem;
+    padding: 2rem;
+    z-index: -1;
+}
+
+.row {
+    display: flex;
+
+}
+
+.box {
+    width: 100%;
+    height: 14rem;
+    background: linear-gradient(135deg, #364a60, #384c6c);
+    background: radial-gradient(ellipse at bottom, #1f496f 0%, #192643 80%);
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 1.25rem;
+    animation: fade linear both;
+    animation-timeline: view();
+    animation-range: entry 50% cover 50%;
+    animation-duration: 1ms;
+
+}
+
+.box2,
+.box3,
+.box6,
+.box7,
+.box10,
+.box11,
+.box14,
+.box15 {
+    display: block;
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-size: 1em;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+.box h2,
+.box p {
+    background: linear-gradient(90deg, white, transparent);
+    background-size: 200%;
+    border-radius: 0.5rem;
+    padding: 0.6rem;
+    animation: reveal both linear;
+    animation-timeline: view();
+    background-repeat: no-repeat;
+    animation-range: entry 50% cover 50%;
+    animation-duration: 1ms;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 700;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.box h2 {
+    font-family: 'Quantico', sans-serif;
+
+
+}
+
+.eleft {
+    animation: faderight both linear;
+    animation-timeline: view();
+    animation-range: entry 50% cover 50%;
+    animation-duration: 1ms;
+}
+
+.eright {
+    animation: fadeleft both linear;
+    animation-timeline: view();
+    animation-range: entry 50% cover 50%;
+    animation-duration: 1ms;
+
+}
+
+@keyframes waviy {
+
+    0%,
+    40%,
+    100% {
+        transform: translateY(0)
+    }
+
+    20% {
+        transform: translateY(-1.25rem)
+    }
+}
+
+@keyframes faderight {
+    from {
+        transform: translateX(-18%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes fadeleft {
+    from {
+        transform: translateX(+18%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+
+
+}
+
+
+
+
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+    0% {
+        opacity: 0;
+    }
+}
+
+@keyframes reveal {
+
+    from {
+        background-position-x: 200%;
+    }
+
+    to {
+        background-position-x: 0%;
+
+    }
+
+    50% {
+        background-position-x: 180%;
+    }
+
+    75% {
+        background-position-x: 150%;
+
+    }
+
+    90% {
+        background-position: 0%;
+    }
+
+}
+@media (max-width: 1000px) {
+    .events {
+      background-size: 100% 100%;
+      width: 100%;
+      height: 100%;
+      
+    }
+  }
+.box img {
+    width: 100%;
+    height: 100%;
+}
+
+.box1 {
+    background-image: url("./images/Launchpad.png");
+    background-size: cover;
+    background-position: center center
+}
+
+.box4 {
+    background-image: url("./images/Quest-Youth.png");
+    background-size: cover;
+    background-position: center center
+}
+
+.box5 {
+    background-image: url("./images/Startup-spark.png");
+    background-size: cover;
+    background-position: center center
+}
+
+.box8 {
+    background-image: url("./images/Cultural-event.png");
+    background-size: cover;
+    background-position: center center
+}
+
+.box9 {
+    background-image: url("./images/Visionary-Ventures.png");
+    background-size: cover;
+    background-position: center center
+}
+
+.box12 {
+    background-image: url("./images/Bizblitz.png");
+    background-size: cover;
+    background-position: center center
+}
+
+.box13 {
+    background-image: url("./images/Seedstart-summit.png");
+    background-size: cover;
+    background-position: center center
+}
+
+.box16 {
+    background-image: url("./images/Pitch-perfect.png");
+    background-size: cover;
+    background-position: center center
+}
+
+
+.ebtn {
+    margin-bottom: -1.8rem;
+    width: 8rem;
+    height: 1.7rem;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 1rem;
+    background-color: #273440;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    transition: box-shadow .15s, transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+}
+
+.ebtn:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.ebtn:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+.ebtn:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+}
+
+
+
+
+
+#estars {
+    width: 100%;
+    height: 100%;
+    /* background: radial-gradient(ellipse at top, #1f496f 0%, #0d1526 100%); */
+    /* background-color: aqua; */
+}
+
+@media ((max-width:51.25rem)) {
+    .eventlist {
+        margin: 3.5rem;
+        margin-top: -8rem;
+        margin-bottom: 2.5rem;
+        padding: 0;
+
+    }
+
+    .row {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .row2,
+    .row4,
+    .row6,
+    .row8 {
+        flex-direction: column-reverse;
+    }
+
+    .box {
+        width: 100%;
+        height: 18rem;
+        padding: 0;
+    }
+
+    .ebtn {
+        margin-bottom: 1rem;
+    }
+
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+canvas#canvas {
+    
+    top: 0;
+    left: 0;
+    display: block;
+    background: transparent; /* Set the canvas background to be transparent */
+    width: 100%; /* Make sure the canvas takes up the full width of the parent container */
+    height: 100%; /* Make sure the canvas takes up the full height of the parent container */
+}
+.to{
+    margin-top: 50px;
+    background-color: aqua;
+}
+
+
+/* Set a fixed aspect ratio for the carousel items */
+
+/* #container {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+  }
+  
+  #countdown {
+    background-image: url(https://static.vecteezy.com/system/resources/previews/002/250/709/original/business-word-innovation-free-vector.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    height: 400px;
+  }
+  @import url(https://fonts.googleapis.com/css?family=Covered+By+Your+Grace);
+
+
+
+  
+
+  
+  @media (max-width: 768px) {
+    #countdown {
+      font-size: 20px; 
+    }
+  }
+  
+  @media (max-width: 576px) {
+    #countdown {
+      font-size: 16px; 
+      height: 200px;
+    }
+  }
+  
+   */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* general styling */
+
+  
+.container {
+    background-image: url(https://wallpapercave.com/wp/wp2026758.jpg);
+    background-size: cover;
+    background-attachment: fixed; /* Add this line to make the background fixed */
+    background-size: 100% 100%;
+    color:#bc5090;
+    margin: 0 auto;
+    text-align: center;
+  
+    margin-top: 20vh; /* Adjust this margin to your preference */
+      
+  }
+  
+  h1 {
+   
+    
+
+    font-size: medium;
+    letter-spacing: .125rem;
+    text-transform: uppercase;
+  }
+  
+  li {
+    
+    display: inline-block;
+    font-size: 3rem;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+  }
+  
+  li span {
+    display: block;
+    font-size: 8rem;
+  }
+  
+  .emoji {
+    display: none;
+    padding: 1rem;
+  }
+  
+  .emoji span {
+    font-size: 4rem;
+    padding: 0 .5rem;
+  }
+  
+  @media all and (max-width: 768px) {
+    h1 {
+      font-size: calc(1.5rem * var(--smaller));
+    }
+    
+    li {
+      font-size: calc(1.125rem * var(--smaller));
+    }
+    
+    li span {
+      font-size: calc(3.375rem * var(--smaller));
+    }
+    .container
+
+    {
+    background-size: cover;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    }
+    .event{
+        position: sticky;
+    }
+}
+  
